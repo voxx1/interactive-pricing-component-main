@@ -18,7 +18,8 @@ body {
     background-color: hsl(230, 100%, 99%);
     background-image: url(images/bg-pattern.svg);
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: top left;
+    background-size: 100vw 50%;
 }
 .wrapper {
     width: 400px;
@@ -196,10 +197,8 @@ input[type="range"]::-moz-range-thumb {
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
-        -webkit-box-shadow: 0 8px 6px -6px black;
-           -moz-box-shadow: 0 8px 6px -6px black;
-                box-shadow: 0 8px 6px -6px black;
-    
+    -webkit-box-shadow: 0 0.5rem 2rem rgba(31, 18, 18, 0.1);
+    box-shadow: 0 0.5rem 2rem rgba(29, 15, 15, 0.1);
 
 
     .slider-block {
@@ -312,11 +311,15 @@ input[type="range"]::-moz-range-thumb {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    text-align: left;
     margin-left: 50px;
     margin-right: 50px;
 
     button {
         height: 50px;
+    }
+    li {
+        text-align: left;
     }
 }
     .desktop {
@@ -331,18 +334,3 @@ input[type="range"]::-moz-range-thumb {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
