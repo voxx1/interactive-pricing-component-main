@@ -8,11 +8,6 @@ const progressButton = document.getElementById('progress');
 let discount = 1
 output.innerHTML = slider.value
 
-discountApplied = () => {
-    if (checkbox.checked === true) discount = 0.75;
-    if (checkbox.checked === false) discount = 1;
-    return discount;
-}
 
 change = () => {
 if (slider.value <= 20) {
@@ -32,12 +27,19 @@ if (slider.value <= 20) {
     price.innerHTML = 36 * discount;
     }
 }
-
-
+checkbox.addEventListener("click", function() {
+    if (checkbox.checked === true) {
+    discount = 0.75;
+    price.innerText = price.innerText * discount;
+} else if (checkbox.checked === false) {
+    discount = 1
+    price.innerText = price.innerText * discount;
+    price.innerText = parseInt(price.innerText) + (parseInt(price.innerText) * 1/3); 
+    }
+})
 
 slider.oninput = function update() {
     output.innerHTML = this.value;
     progressButton.style.width = slider.value + "%";
-    discountApplied();
     change();
 }
