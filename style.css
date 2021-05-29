@@ -19,7 +19,8 @@ body {
   background-color: #fafbff;
   background-image: url(images/bg-pattern.svg);
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: top left;
+  background-size: 100vw 50%;
 }
 
 .wrapper {
@@ -202,8 +203,8 @@ input[type="range"]::-moz-range-thumb {
   padding: 20px;
   margin: 20px;
   border-radius: 20px;
-  -webkit-box-shadow: 0 8px 6px -6px black;
-  box-shadow: 0 8px 6px -6px black;
+  -webkit-box-shadow: 0 0.5rem 2rem rgba(31, 18, 18, 0.1);
+  box-shadow: 0 0.5rem 2rem rgba(29, 15, 15, 0.1);
 }
 
 .container .slider-block {
@@ -346,11 +347,15 @@ input[type="range"]::-moz-range-thumb {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    text-align: left;
     margin-left: 50px;
     margin-right: 50px;
   }
   .bottom-block button {
     height: 50px;
+  }
+  .bottom-block li {
+    text-align: left;
   }
   .desktop {
     display: block !important;
